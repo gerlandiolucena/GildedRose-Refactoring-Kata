@@ -13,7 +13,9 @@ public class GildedRose {
     }
     
     public func updateQuality(item: ConjuredItem) {
-        item.qualityAssure = item.qualityAssure + (item.category.qualityVariation * 2)
+        for _ in 1...2 {
+            updateQuality(item: item as CommonItem)
+        }
     }
     
     public func updateQuality(item: AgedItem) {
@@ -24,6 +26,8 @@ public class GildedRose {
             }
             if (1...5).contains(pass.sellIn)  {
                 qualityMultiplier = 3
+            } else if pass.sellIn < 0 {
+                item.qualityAssure = 0
             }
             
             item.qualityAssure = item.qualityAssure + (item.category.qualityVariation * qualityMultiplier)

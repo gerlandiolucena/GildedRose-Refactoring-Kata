@@ -63,6 +63,16 @@ class GildedRoseTests: XCTestCase {
         XCTAssertEqual(items.first!.quality, 27)
     }
     
+    func testPassItemWithThreeDaysLeft() {
+        let items = [PassItem(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 3, quality: 40)]
+        let app = GildedRose(items: items);
+        for _ in 1...4 {
+            app.updateQuality();
+        }
+        XCTAssertEqual(items.first!.sellIn, -1)
+        XCTAssertEqual(items.first!.quality, 0)
+    }
+    
     func testConjuredItens() {
         let items = [ConjuredItem(name: "Conjured Mana Cake", sellIn: 6, quality: 12)]
         let app = GildedRose(items: items);
