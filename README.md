@@ -47,6 +47,6 @@ This code comes with comprehensive tests that use this approach. For information
 
 ## Better Code Hub
 
-I analysed this repo according to the clean code standards on [Better Code Hub](https://bettercodehub.com) just to get an independent opinion of how bad the code is. Perhaps unsurprisingly, the compliance score is low!
+I analysed this repo according to the clean code standards on [Better Code Hub](https://bettercodehub.com) just to get an independent opinion of how bad the code is. 
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/gerlandiolucena/GildedRose-Refactoring-Kata)](https://bettercodehub.com/) 
